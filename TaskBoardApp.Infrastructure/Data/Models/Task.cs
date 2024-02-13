@@ -36,5 +36,6 @@ public class Task
     [Comment("The identifier of the user who has created the task")]
     public string OwnerId { get; set; } = null!;
 
+    [ForeignKey(nameof(OwnerId))]
     public IdentityUser Owner { get; set; } = null!;
 }
