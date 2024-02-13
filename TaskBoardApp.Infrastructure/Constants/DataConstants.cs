@@ -1,4 +1,4 @@
-﻿namespace TaskBoardApp.Data;
+﻿namespace TaskBoardApp.Infrastructure.Constants;
 
 public static class DataConstants
 {

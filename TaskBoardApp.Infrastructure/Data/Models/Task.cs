@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using static TaskBoardApp.Data.DataConstants.Task;
+using static TaskBoardApp.Infrastructure.Constants.DataConstants.Task;
 
 namespace TaskBoardApp.Data.Models;
 

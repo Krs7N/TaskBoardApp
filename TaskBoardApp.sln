@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskBoardApp", "TaskBoardApp\TaskBoardApp.csproj", "{B2F23C36-5807-4ACF-B0B0-3A6DFF498482}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskBoardApp", "TaskBoardApp\TaskBoardApp.csproj", "{B2F23C36-5807-4ACF-B0B0-3A6DFF498482}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskBoardApp.Core", "TaskBoardApp.Core\TaskBoardApp.Core.csproj", "{8AAD4EC5-AE60-4FC3-A94A-6F70586BD6DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskBoardApp.Infrastructure", "TaskBoardApp.Infrastructure\TaskBoardApp.Infrastructure.csproj", "{0CD59F3D-1624-4778-BAB6-A8601162D3BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B2F23C36-5807-4ACF-B0B0-3A6DFF498482}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2F23C36-5807-4ACF-B0B0-3A6DFF498482}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2F23C36-5807-4ACF-B0B0-3A6DFF498482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AAD4EC5-AE60-4FC3-A94A-6F70586BD6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AAD4EC5-AE60-4FC3-A94A-6F70586BD6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AAD4EC5-AE60-4FC3-A94A-6F70586BD6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AAD4EC5-AE60-4FC3-A94A-6F70586BD6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD59F3D-1624-4778-BAB6-A8601162D3BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD59F3D-1624-4778-BAB6-A8601162D3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD59F3D-1624-4778-BAB6-A8601162D3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD59F3D-1624-4778-BAB6-A8601162D3BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

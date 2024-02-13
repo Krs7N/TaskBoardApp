@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
-using static TaskBoardApp.Data.DataConstants.Board;
+using static TaskBoardApp.Infrastructure.Constants.DataConstants.Board;
 
 namespace TaskBoardApp.Data.Models;
 
