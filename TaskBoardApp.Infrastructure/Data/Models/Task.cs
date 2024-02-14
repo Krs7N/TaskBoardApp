@@ -37,5 +37,5 @@ public class Task
     public string OwnerId { get; set; } = null!;
 
     [ForeignKey(nameof(OwnerId))]
-    public IdentityUser Owner { get; set; } = null!;
+    public virtual IdentityUser Owner { get; set; } = null!;
 }

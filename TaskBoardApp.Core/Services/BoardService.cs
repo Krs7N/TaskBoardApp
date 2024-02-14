@@ -16,6 +16,6 @@ public class BoardService : IBoardService
 
     public async Task<IEnumerable<Board>> GetAllAsync()
     {
-        return await _context.Boards.Include(b => b.Tasks).AsNoTracking().ToListAsync();
+        return await _context.Boards.Include(b => b.Tasks).ThenInclude(t => t.Owner).AsNoTracking().ToListAsync();
     }
 }
