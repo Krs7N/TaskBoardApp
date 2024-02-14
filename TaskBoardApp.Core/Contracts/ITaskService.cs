@@ -11,4 +11,6 @@ public interface ITaskService
     Task AddAsync(DataTask task);
 
     Task<DataTask?> GetTaskDetailsByIdAsync(int id);
+    Task SaveChangesAsync();
+    Task DeleteAsync(DataTask task);
 }

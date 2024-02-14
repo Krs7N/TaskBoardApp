@@ -35,4 +35,12 @@ public class TaskService : ITaskService
             .Where(t => t.Id == id)
             .FirstOrDefaultAsync();
     }
+
+    public async Task DeleteAsync(DataTask task)
+    {
+        _data.Tasks.Remove(task);
+        await _data.SaveChangesAsync();
+    }
+
+    public async Task SaveChangesAsync() => await _data.SaveChangesAsync();
 }
