@@ -1,0 +1,29 @@
+﻿using Microsoft.EntityFrameworkCore;
+using TaskBoardApp.Core.Contracts;
+using TaskBoardApp.Data;
+using TaskBoardApp.Data.Models;
+using Task = System.Threading.Tasks.Task;
+using DataTask = TaskBoardApp.Data.Models.Task;
+
+namespace TaskBoardApp.Core.Services;
+
+public class TaskService : ITaskService
+{
+    private readonly TaskBoardAppDbContext _data;
+
+    public TaskService(TaskBoardAppDbContext context)
+    {
+        _data = context;
+    }
+
+    public async Task<IEnumerable<Board>> GetBoardsAsync()
+    {
+        return await _data.Boards.AsNoTracking().ToListAsync();
+    }
+
+    public async Task AddAsync(DataTask task)
+    {
+        await _data.Tasks.AddAsync(task);
+        await _data.SaveChangesAsync();
+    }
+}

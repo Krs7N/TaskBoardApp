@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TaskBoardApp.Core.Contracts;
 using TaskBoardApp.Models;
 
 namespace TaskBoardApp.Controllers
 {
+    [Authorize]
     public class BoardController : Controller
     {
         private readonly IBoardService _boardService;
@@ -13,6 +15,7 @@ namespace TaskBoardApp.Controllers
             _boardService = boardService;
         }
 
+        [HttpGet]
         public async Task<IActionResult> All()
         {
 
