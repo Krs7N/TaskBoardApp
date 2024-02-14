@@ -1,4 +1,4 @@
-﻿namespace TaskBoardApp.Models;
+﻿namespace TaskBoardApp.Models.Task;
 
 public class TaskViewModel
 {

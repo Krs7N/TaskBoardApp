@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using TaskBoardApp.Core.Contracts;
-using TaskBoardApp.Models;
+using TaskBoardApp.Models.Board;
+using TaskBoardApp.Models.Task;
 using Task = TaskBoardApp.Data.Models.Task;
 
 namespace TaskBoardApp.Controllers
@@ -57,6 +58,34 @@ namespace TaskBoardApp.Controllers
             await _taskService.AddAsync(task);
 
             return RedirectToAction("All", "Board");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            if (id <= 0)
+            {
+                return BadRequest();
+            }
+
+            var task = await _taskService.GetTaskDetailsByIdAsync(id);
+
+            if (task == null)
+            {
+                return NotFound();
+            }
+
+            var model = new TaskDetailsViewModel()
+            {
+                Id = task.Id,
+                Title = task.Title,
+                Description = task.Description,
+                CreatedOn = task.CreatedOn.ToString("dd/MM/yyyy HH:mm"),
+                Board = task.Board.Name,
+                Owner = task.Owner.UserName
+            };
+
+            return View(model);
         }
 
         private string GetCurrentUserId() => User.FindFirstValue(ClaimTypes.NameIdentifier);

@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TaskBoardApp.Core.Contracts;
-using TaskBoardApp.Models;
+using TaskBoardApp.Models.Board;
+using TaskBoardApp.Models.Task;
 
 namespace TaskBoardApp.Controllers
 {

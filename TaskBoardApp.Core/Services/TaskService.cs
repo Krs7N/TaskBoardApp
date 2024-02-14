@@ -26,4 +26,13 @@ public class TaskService : ITaskService
         await _data.Tasks.AddAsync(task);
         await _data.SaveChangesAsync();
     }
+
+    public async Task<DataTask?> GetTaskDetailsByIdAsync(int id)
+    {
+        return await _data.Tasks
+            .Include(t => t.Owner)
+            .Include(t => t.Board)
+            .Where(t => t.Id == id)
+            .FirstOrDefaultAsync();
+    }
 }

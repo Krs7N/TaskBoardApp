@@ -1,4 +1,6 @@
-﻿namespace TaskBoardApp.Models;
+﻿using TaskBoardApp.Models.Task;
+
+namespace TaskBoardApp.Models.Board;
 
 public class BoardViewModel
 {
