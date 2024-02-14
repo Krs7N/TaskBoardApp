@@ -21,6 +21,11 @@ public class TaskService : ITaskService
         return await _data.Boards.AsNoTracking().ToListAsync();
     }
 
+    public async Task<IEnumerable<DataTask>> GetTasksWithBoardsAndUsersAsync()
+    {
+        return await _data.Tasks.Include(t => t.Board).Include(t => t.Owner).AsNoTracking().ToListAsync();
+    }
+
     public async Task AddAsync(DataTask task)
     {
         await _data.Tasks.AddAsync(task);

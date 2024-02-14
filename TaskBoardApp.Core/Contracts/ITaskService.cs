@@ -8,9 +8,13 @@ public interface ITaskService
 {
     Task<IEnumerable<Board>> GetBoardsAsync();
 
+    Task<IEnumerable<DataTask>> GetTasksWithBoardsAndUsersAsync();
+
     Task AddAsync(DataTask task);
 
     Task<DataTask?> GetTaskDetailsByIdAsync(int id);
+
     Task SaveChangesAsync();
+
     Task DeleteAsync(DataTask task);
 }
